@@ -4,8 +4,7 @@ require_once("layouts/header.php");
 <h1 class="text-center">EDITAR</h1>
 <form action="" method="get">
     <?php
-        if(!empty($dato)):
-        foreach($dato as $key => $value):
+    foreach($dato as $key => $value):
         foreach($value as $v):
         ?>
         <input type="text" value="<?php echo $v['nombre'] ?>" name="nombre"> <br>
