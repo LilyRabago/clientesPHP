@@ -7,9 +7,10 @@ class Modelo{
         $this->Modelo = array();
         $this->db = new PDO('mysql:host=localhost;dbname=clientes',"root","");
     }
-    
+
     public function insertar($tabla, $data){
-        $consulta="insert into ".$tabla." values(null,". $data .")";
+        $consulta="insert into ".$tabla." (`id`, `nombre`, `rfc`, `domicilio`) values(7,". $data ."')";
+       
         $resultado=$this->db->query($consulta);
         if ($resultado) {
             return true;
